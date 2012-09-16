@@ -96,6 +96,7 @@ public class AndroidChangelog {
 					titleview.setText(getTitle());
 					contentview.setText(Html.fromHtml(getContent()));
 					
+					// The quit-button
 					Button quitbutton = (Button) sv.findViewById(org.copywaste.androidchangelog.R.id.changelog_quitbutton);
 					quitbutton.setTag(sv);
 					quitbutton.setOnClickListener(new OnClickListener() {
@@ -106,7 +107,7 @@ public class AndroidChangelog {
 						}
 					});
 					
-					// Setting a fade-in on our scrollview
+					// Setting a fade-in on our view
 					sv.setAnimation(AnimationUtils.loadAnimation(activity, ourAnimation));
 					
 					// Add the whole bunch to the root-View
