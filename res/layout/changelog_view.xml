@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#EE101010"
+    android:padding="10dp"
+    >
+    <ScrollView
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:background="#EE000000"
+    	>
+    	<LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:orientation="vertical"
+    	android:layout_margin="10dp"
+    	>
+    		<TextView 
+    		    android:id="@+id/changelog_title"
+    		    android:layout_width="fill_parent"
+    		    android:layout_height="wrap_content"
+    		    android:ellipsize="marquee"
+    		    android:singleLine="true"
+    		    android:textColor="#ffffffff"
+    		    android:textSize="20dp"
+    		    android:textStyle="bold"
+    		    android:layout_marginBottom="20dp"
+    		    android:layout_gravity="center_horizontal"
+    		    android:gravity="center_horizontal"
+    		    />
+    		<TextView
+    		    android:id="@+id/changelog_content"
+    		    android:layout_width="fill_parent"
+    		    android:layout_height="wrap_content"
+    		    android:textColor="#ffffffff"
+    		    android:typeface="serif"
+    		    android:textSize="16dp"
+    		    />
+    			<Button 
+	    android:id="@+id/changelog_quitbutton"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="10dp"
+	    android:gravity="center"
+	    android:layout_gravity="bottom|center_horizontal"
+	    android:text="Got it!"
+	    />
+    		
+    	</LinearLayout>
+    </ScrollView>
+</LinearLayout>
