@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="#EE101010"
+    android:background="#CC202020"
     android:padding="10dp"
     >
     <ScrollView
@@ -31,6 +31,8 @@
     		    android:layout_marginBottom="20dp"
     		    android:layout_gravity="center_horizontal"
     		    android:gravity="center_horizontal"
+    		    android:background="@android:drawable/dark_header"
+    		    android:padding="5dp"
     		    />
     		<TextView
     		    android:id="@+id/changelog_content"
