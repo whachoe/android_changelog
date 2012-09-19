@@ -27,6 +27,34 @@ Show a simple changelog-screen whenever a user updates your app.
        cl.init();
 </pre>
 
+* If you want to make a menu-item for it:
+<pre>
+       private static final int MENU_CHANGELOG = 1;
+       public boolean onCreateOptionsMenu(Menu menu) 
+       {
+	 	    super.onCreateOptionsMenu(menu);
+		    // Code for Changelog
+		    menu.add(2, MENU_CHANGELOG, 3, "Changelog");
+		
+		    return true;
+	    }
+
+	    @Override
+	    public boolean onMenuItemSelected(int featureId, MenuItem item) 
+	    {
+		    boolean result = super.onMenuItemSelected(featureId, item);
+
+		    switch(item.getItemId()) {
+		    // Code for Changelog	
+		    case MENU_CHANGELOG: 
+			    AndroidChangelog.getInstance().showChangelog();
+			    return(true);
+		    }
+		
+		    return result;
+	    }
+</pre>
+
 # How does it do it?
 It keeps the version for which you last viewed the changelog in your app's SharedPreferences. Each time the app starts, the current version gets checked against that preference and if the current version > preference-version, the changelog-screen gets shown    
 The code is actually very simple.   
